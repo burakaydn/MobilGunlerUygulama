@@ -29,6 +29,9 @@
         <activity
             android:name="org.gdg.mobilgunleruygulama.ThirdActivity" >
         </activity>
+        <activity
+            android:name="org.gdg.mobilgunleruygulama.ChangeSettingsActivity" >
+        </activity>
     </application>
 
 </manifest>
