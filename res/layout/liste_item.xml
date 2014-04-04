@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content" 
+    android:padding="20dp">
+    
+    <ImageView 
+        android:id="@+id/isaretci_id"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_centerVertical="true"
+        android:background="@drawable/isaretci"/>
+    
+    <TextView 
+        android:id="@+id/item_text_id"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/text_color"
+        android:layout_toRightOf="@+id/isaretci_id"
+        android:layout_marginLeft="10dp"
+        android:textSize="18sp"
+        android:textStyle="bold"/>
+    
+    <TextView 
+        android:id="@+id/item_no_id"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/text_color"
+        android:layout_below="@+id/item_text_id"
+        android:layout_marginTop="10dp"
+        android:layout_alignLeft="@+id/item_text_id"
+        android:textSize="18sp"
+        android:textStyle="bold"/>
+
+</RelativeLayout>
