@@ -16,7 +16,7 @@ public class ChangeSettingsActivity extends Activity {
 
 	private EditText yeniKullaniciAdi, yeniSifre;
 	private Button kaydet;
-	Editor settingsEditor;
+	private SharedManager sharedYonetici;
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -43,21 +43,18 @@ public class ChangeSettingsActivity extends Activity {
 				String kullaniciAdi = yeniKullaniciAdi.getText().toString();
 				String sifre = yeniSifre.getText().toString();
 				SharedPrefKaydet(kullaniciAdi, sifre);
+				Toast.makeText(ChangeSettingsActivity.this, "Deðiþiklikleriniz kaydedildi.", 1000).show();
 			}
 		});
 	}
 	
 	
 	private void SharedPrefHazirla() {
-		SharedPreferences settings = getSharedPreferences("user", Context.MODE_PRIVATE);
-		settingsEditor = settings.edit();		
+		sharedYonetici=new SharedManager(this);	
 	}
 	
-	
 	private void SharedPrefKaydet(String kullaniciAdi, String sifre) {
-		settingsEditor.putString("kullaniciAdi", kullaniciAdi);
-		settingsEditor.putString("sifre", sifre);
-		settingsEditor.commit();
-		Toast.makeText(getApplicationContext(), "Bilgiler deÄŸiÅŸtirildi", Toast.LENGTH_LONG).show();
+		sharedYonetici.kullaniciAdiDegistir(kullaniciAdi);
+		sharedYonetici.sifreDegistir(sifre);
 	}
 }

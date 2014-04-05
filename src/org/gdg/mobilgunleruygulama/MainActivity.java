@@ -15,6 +15,7 @@ public class MainActivity extends Activity {
 	
 	private EditText kullanici_adi,sifre;
 	private Button giris;
+	//private SharedManager sharedYonetici;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -23,7 +24,12 @@ public class MainActivity extends Activity {
 		setContentView(R.layout.activity_main);
 		viewBagla();
 		butonlarAktif();
+		//SharedPrefHazirla();
 	}
+
+	/*private void SharedPrefHazirla() {
+		sharedYonetici=new SharedManager(this);
+	}*/
 
 	private void viewBagla() {
 		kullanici_adi=(EditText)findViewById(R.id.kullaniciAdi_id);
@@ -45,6 +51,15 @@ public class MainActivity extends Activity {
 				else{
 					Toast.makeText(MainActivity.this, "Hatalý Giriþ", 1000).show();
 				}
+				
+				/*if(kullanici_adi.getText().toString().equals(sharedYonetici.getKullaniciAdi()) &&
+				   sifre.getText().toString().equals(sharedYonetici.getSifre())){
+					Intent intent=new Intent(MainActivity.this,SecondActivity.class);
+					startActivity(intent);
+				}
+				else{
+					Toast.makeText(MainActivity.this, "Hatalý Giriþ", 1000).show();
+				}*/
 			}
 		});
 	}

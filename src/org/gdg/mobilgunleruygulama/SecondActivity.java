@@ -52,11 +52,6 @@ public class SecondActivity extends Activity {
 		liste.add("http://www.milliyet.com");
 		liste.add("tel:123456");
 		liste.add("Change_Settings");
-//		liste.add("http://www.webrazzi.com");
-//		liste.add("http://www.milliyet.com");
-//		liste.add("http://www.google.com");
-//		liste.add("http://www.webrazzi.com");
-//		liste.add("http://www.milliyet.com");
 	}
 	
 }
